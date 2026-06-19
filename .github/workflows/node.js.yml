@@ -30,6 +30,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
 
+# Detailed comments for learning purposes
   docker-build:
     runs-on: ubuntu-latest # This tells GitHub Actions to run this job on a temporary Ubuntu Linux machine.
     needs: build # This means "Do not start docker-build until the build job passes."
