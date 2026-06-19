@@ -29,3 +29,14 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+  docker-build:
+    runs-on: ubuntu-latest # This tells GitHub Actions to run this job on a temporary Ubuntu Linux machine.
+    needs: build # This means "Do not start docker-build until the build job passes."
+
+    steps: # This is the list of tasks that will run inside the docker-build job.
+      - name: Checkout repository # This is the display name of the step shown in the GitHub Actions logs.
+        uses: actions/checkout@v4 # This downloads your repository code into the GitHub Actions runner so Docker can access the Dockerfile and project files.
+
+      - name: Build Docker image # This is the display name of the Docker build step in the GitHub Actions logs.
+        run: docker build -t gha-node-ci-cd-practice . # This runs the Docker build command, names the image gha-node-ci-cd-practice, and uses the current repository folder as the build context.   
