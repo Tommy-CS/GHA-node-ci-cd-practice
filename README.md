@@ -1,7 +1,10 @@
-## CI Pipeline
+## CI/CD Pipeline
 
-This project uses GitHub Actions to automatically install dependencies and run tests when code is pushed to main or submitted through a pull request.
+This project uses GitHub Actions to validate changes before they are merged into `main`.
 
-## Branch Protection
+The workflow automatically:
+- Installs project dependencies
+- Runs the Node.js test suite across multiple Node versions
+- Builds a Docker image to confirm the application can be containerized successfully
 
-The main branch is protected by a GitHub ruleset. Pull requests must pass the Node.js CI workflow before merging.
+The `main` branch is protected by a GitHub ruleset, so pull requests must pass all required checks before merging.
