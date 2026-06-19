@@ -1,17 +1,3 @@
-## Jest Nodejs Supertest
+## CI Pipeline
 
-Simple example of Testing a Nodejs express REST API using Jest and Supertest.
-
-### Installation
-
-```
-git clone https://github.com/FaztWeb/nodejs-jest-supertest
-cd nodejs-jest-supertest
-npm install
-```
-
-### Test
-
-```
-npm test
-```
+This project uses GitHub Actions to automatically install dependencies and run tests when code is pushed to main or submitted through a pull request.
