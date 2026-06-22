@@ -52,14 +52,14 @@ Pong
 The final workflow follows this process:
 
 ```text
-Developer opens a pull request
-GitHub Actions runs Node.js tests across multiple versions
-Docker image build is validated
-Required checks must pass before merging
-Pull request merges into main
-Docker image is published to GitHub Container Registry
-Render deploy hook is triggered
-Render redeploys the latest container image
+- Developer opens a pull request
+- GitHub Actions runs Node.js tests across multiple versions
+- Docker image build is validated
+- Required checks must pass before merging
+- Pull request merges into main
+- Docker image is published to GitHub Container Registry
+- Render deploy hook is triggered
+- Render redeploys the latest container image
 ```
 
 ## GitHub Actions Pipeline
